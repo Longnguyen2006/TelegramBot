@@ -1,6 +1,7 @@
 FROM python:3.9.7
 COPY requirement.txt ./
-WORKDIR /app
+WORKDIR ./
 RUN pip install -r requirement.txt
-COPY . /app
+RUN pip install -m --upgrade pip
+COPY . /
 CMD ["python" "./app/main.py"]
