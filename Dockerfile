@@ -1,5 +1,5 @@
 FROM python:3.9.7
-COPY /requirements.txt /app/requirements.txt
+COPY requirements.txt ./
 WORKDIR /app
 RUN pip install -r /app/requirements.txt
 COPY . /app
