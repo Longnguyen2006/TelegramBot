@@ -5,4 +5,4 @@ RUN pip freeze > requirement.txt
 #RUN pip install -r requirement.txt
 RUN pip install -m --upgrade pip
 COPY . /
-CMD ["python" "./app/main.py"]
+CMD ["python" "./main.py"]
