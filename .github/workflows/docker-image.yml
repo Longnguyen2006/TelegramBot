@@ -33,7 +33,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
-          push: true
+          push: true 
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/flask-helloworld
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
