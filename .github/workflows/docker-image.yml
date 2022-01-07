@@ -1,18 +1,11 @@
-name: Telegram-bot
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+name: telegram-bot
+on: 
+    push:
+      branches: [ master] 
+    
 jobs:
-
-  build:
-
-    runs-on: ubuntu-latest
-
+  docker: 
+    runs-onL ubuntu-lastes
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - name: checkout
+        uses: actions/checkout@v2
