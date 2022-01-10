@@ -6,9 +6,9 @@ from bs4 import BeautifulSoup
 
 def get_news():
     list_news = []
-    r = requests.get("https://baotintuc.vn/tags/nga.htm")
+    r = requests.get("https://www.nbcnews.com/")
     soup = BeautifulSoup(r.text, 'html.parser')
-    mydivs = soup.find_all("h3", {"class": "des"})
+    mydivs = soup.find_all("h2", {"class": "tease-card__headline tease-card__title relative"})
 
     for new in mydivs:
         newdict = {}
